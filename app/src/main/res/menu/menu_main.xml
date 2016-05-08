@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.admin.instacoder.MainActivity" >
+    <item android:id="@+id/addImage"
+        android:title="Добавить"
+        android:orderInCategory="100"
+        android:icon="@drawable/plusicon"
+        app:showAsAction="always" />
+    <item android:id="@+id/listmage"
+        android:title="Список"
+        android:orderInCategory="100"
+        android:icon="@drawable/listicon"
+        app:showAsAction="always" />
+    <item android:id="@+id/about"
+        android:title="Список"
+        android:orderInCategory="100"
+        android:icon="@drawable/about"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/faq"
+        android:title="Список"
+        android:orderInCategory="100"
+        android:icon="@drawable/faqbutton"
+        app:showAsAction="always" />
+
+</menu>
