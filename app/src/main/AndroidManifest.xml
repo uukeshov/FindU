@@ -25,15 +25,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AddImageActivity"
-            android:label="@string/title_activity_add_image"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.uukeshov.findu.MainActivity" />
-        </activity>
-        <activity
             android:name=".AboutCreatorActivity"
             android:label="@string/title_activity_about_creator"
             android:parentActivityName=".MainActivity"
