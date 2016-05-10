@@ -61,6 +61,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.uukeshov.findu.MainActivity" />
         </activity>
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.uukeshov.findu.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

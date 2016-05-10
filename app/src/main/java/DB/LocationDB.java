@@ -15,7 +15,6 @@ class LocationDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.d(LOG_TAG, "--- onCreate database ---");
 
         db.execSQL("create table location (id integer primary key autoincrement,adress text,createdate text, latitude text, longitude text);");
         db.execSQL("create table user (id integer primary key autoincrement,key text,createdate text);");

@@ -10,10 +10,10 @@ import android.view.View;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-
 public class MainActivity extends AppCompatActivity {
     String LOG_TAG = "myinstaLog";
     private AdView mAdView;
+    RestClient rc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.map_btn:
                 Intent map = new Intent(this, ShowCurrentLocationActivity.class);
                 startActivity(map);
+                break;
+            case R.id.sendinfo_btn:
+                Log.d(LOG_TAG, "1");
+                rc = new RestClient();
+                rc.StartReq();
                 break;
         }
     }

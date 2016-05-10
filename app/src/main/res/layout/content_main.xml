@@ -73,9 +73,9 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:text="что то еще!"
+        android:text="Найстройки"
         android:textColor="#302CA8"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/sendinfo_btn"
@@ -91,7 +91,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:text="Справка"
+        android:text="Новости"
         android:textColor="#302CA8"
         android:textSize="25sp" />
 
@@ -109,7 +109,7 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:text="Новости"
+        android:text="Справка"
         android:textColor="#302CA8"
         android:textSize="25sp" />
 
