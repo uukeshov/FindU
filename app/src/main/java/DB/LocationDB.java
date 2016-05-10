@@ -26,4 +26,48 @@ class LocationDB extends SQLiteOpenHelper {
 //        db.execSQL("DROP TABLE IF EXIST LocationDB");
     }
 
+    /*block for table permissions*/
+    public void grantPermission() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    public void denyPermission() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    /*block for table location*/
+    public void addLocation() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    public void getLocation() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    public void getAllLocations() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    public void deleteAllLocations() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from location");
+        db.close();
+    }
+
+    public void deleteLocationById(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.delete("location", "id" + "=" + id, null);
+        db.close();
+    }
+
+    /*block for table user*/
+    public void addUser() {
+        Log.d(LOG_TAG, "test");
+    }
+
+    public void editUser() {
+        Log.d(LOG_TAG, "test");
+    }
+
 }

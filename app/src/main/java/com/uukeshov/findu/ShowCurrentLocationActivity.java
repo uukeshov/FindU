@@ -68,7 +68,6 @@ public class ShowCurrentLocationActivity extends FragmentActivity implements OnM
                 e.printStackTrace(); // getFromLocation() may sometimes fail
             }
 
-
             mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
             mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 14.0f));
 

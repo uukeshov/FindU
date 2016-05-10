@@ -1,5 +1,8 @@
 package com.uukeshov.findu;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +13,8 @@ import android.view.View;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
     String LOG_TAG = "myinstaLog";
     private AdView mAdView;
@@ -19,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /**/
+        Calendar cal = Calendar.getInstance();
+
+        Intent intent = new Intent(this, MyService.class);
+        PendingIntent pintent = PendingIntent.getService(this, 0, intent, 0);
+
+        AlarmManager alarm = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        // schedule for every 30 minutes
+
+        alarm.setRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 1800000, pintent);
+        /**/
 
         mAdView = (AdView) findViewById(R.id.ad_view);
         Log.d(LOG_TAG, "Start advertisment");

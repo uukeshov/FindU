@@ -69,10 +69,10 @@ class RestClient {
             JSONObject dataJsonObj = null;
 
             try {
+
                 dataJsonObj = new JSONObject(strJson);
                 JSONArray get = dataJsonObj.getJSONArray("GET");
 
-                // 2. перебираем и выводим контакты каждого друга
                 for (int i = 0; i < get.length(); i++) {
                     JSONObject secondFriend = get.getJSONObject(0);
                     int id = secondFriend.getInt("id");
